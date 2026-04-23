@@ -31,18 +31,18 @@ Partial Class Form1
         HORLINE = New PictureBox()
         Panel1 = New Panel()
         Panel2 = New Panel()
-        Panel3 = New Panel()
-        Label5 = New Label()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        Label1 = New Label()
-        Panel4 = New Panel()
-        Label6 = New Label()
-        Label10 = New Label()
-        Label7 = New Label()
-        Label9 = New Label()
-        Label8 = New Label()
+        Style1_Panel = New Panel()
+        BPM_Label = New Label()
+        DataType_Label = New Label()
+        Family_Name = New Label()
+        Style_Name = New Label()
+        Style1_Label = New Label()
+        Style2_Panel = New Panel()
+        BPM2_Label = New Label()
+        Style2_Label = New Label()
+        DataType2_Label = New Label()
+        Style2_Name = New Label()
+        Family2_Name = New Label()
         Panel5 = New Panel()
         Label21 = New Label()
         Label22 = New Label()
@@ -54,24 +54,66 @@ Partial Class Form1
         PictureBox7 = New PictureBox()
         Label17 = New Label()
         Panel6 = New Panel()
+        Label30 = New Label()
+        Label29 = New Label()
+        Label26 = New Label()
+        Label28 = New Label()
+        Label27 = New Label()
         Panel7 = New Panel()
         Label14 = New Label()
         Label13 = New Label()
         Panel8 = New Panel()
         Label15 = New Label()
         Label16 = New Label()
-        Label11 = New Label()
+        Current_BPM = New Label()
         Label12 = New Label()
-        PictureBox8 = New PictureBox()
-        PictureBox9 = New PictureBox()
-        PictureBox10 = New PictureBox()
-        PictureBox11 = New PictureBox()
-        Label25 = New Label()
-        Label26 = New Label()
-        Label27 = New Label()
-        Label28 = New Label()
-        Label29 = New Label()
-        Label30 = New Label()
+        Beat1 = New PictureBox()
+        Beat2 = New PictureBox()
+        Beat4 = New PictureBox()
+        Beat3 = New PictureBox()
+        DasLabel = New Label()
+        Touch_Control = New Panel()
+        IntroLED3 = New PictureBox()
+        IntroLED2 = New PictureBox()
+        Label37 = New Label()
+        Label36 = New Label()
+        Label35 = New Label()
+        Label34 = New Label()
+        Label33 = New Label()
+        BreakButton = New Label()
+        Main4Button = New Label()
+        Outro3Button = New Label()
+        Outro2Button = New Label()
+        Outro1Button = New Label()
+        Main3Button = New Label()
+        Main2Button = New Label()
+        Main1Button = New Label()
+        Intro3Button = New Label()
+        Intro2Button = New Label()
+        Intro1Button = New Label()
+        PlayPauseButton = New Label()
+        PlayPauseLED = New PictureBox()
+        BreakLED = New PictureBox()
+        MainLED4 = New PictureBox()
+        OutroLED3 = New PictureBox()
+        OutroLED2 = New PictureBox()
+        OutroLED1 = New PictureBox()
+        MainLED3 = New PictureBox()
+        MainLED2 = New PictureBox()
+        MainLED1 = New PictureBox()
+        IntroLED1 = New PictureBox()
+        Break = New PictureBox()
+        Outro3 = New PictureBox()
+        Outro2 = New PictureBox()
+        Outro1 = New PictureBox()
+        Main4 = New PictureBox()
+        Main3 = New PictureBox()
+        Main2 = New PictureBox()
+        Main1 = New PictureBox()
+        Intro3 = New PictureBox()
+        Intro2 = New PictureBox()
+        Intro1 = New PictureBox()
+        Play_Pause = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -79,17 +121,42 @@ Partial Class Form1
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(HORLINE, ComponentModel.ISupportInitialize).BeginInit()
-        Panel3.SuspendLayout()
-        Panel4.SuspendLayout()
+        Style1_Panel.SuspendLayout()
+        Style2_Panel.SuspendLayout()
         Panel5.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         Panel7.SuspendLayout()
         Panel8.SuspendLayout()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Beat1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Beat2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Beat4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Beat3, ComponentModel.ISupportInitialize).BeginInit()
+        Touch_Control.SuspendLayout()
+        CType(IntroLED3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(IntroLED2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PlayPauseLED, ComponentModel.ISupportInitialize).BeginInit()
+        CType(BreakLED, ComponentModel.ISupportInitialize).BeginInit()
+        CType(MainLED4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(OutroLED3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(OutroLED2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(OutroLED1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(MainLED3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(MainLED2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(MainLED1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(IntroLED1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Break, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Outro3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Outro2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Outro1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Main4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Main3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Main2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Main1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Intro3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Intro2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Intro1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Play_Pause, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PictureBox1
@@ -177,155 +244,155 @@ Partial Class Form1
         Panel2.Size = New Size(580, 80)
         Panel2.TabIndex = 8
         ' 
-        ' Panel3
+        ' Style1_Panel
         ' 
-        Panel3.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Panel3.BackgroundImage = My.Resources.Resources.StyleTab_selected
-        Panel3.BackgroundImageLayout = ImageLayout.Stretch
-        Panel3.Controls.Add(Label5)
-        Panel3.Controls.Add(Label4)
-        Panel3.Controls.Add(Label3)
-        Panel3.Controls.Add(Label2)
-        Panel3.Controls.Add(Label1)
-        Panel3.Location = New Point(20, 160)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(690, 250)
-        Panel3.TabIndex = 8
+        Style1_Panel.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Style1_Panel.BackgroundImage = My.Resources.Resources.StyleTab_selected
+        Style1_Panel.BackgroundImageLayout = ImageLayout.Stretch
+        Style1_Panel.Controls.Add(BPM_Label)
+        Style1_Panel.Controls.Add(DataType_Label)
+        Style1_Panel.Controls.Add(Family_Name)
+        Style1_Panel.Controls.Add(Style_Name)
+        Style1_Panel.Controls.Add(Style1_Label)
+        Style1_Panel.Location = New Point(20, 160)
+        Style1_Panel.Name = "Style1_Panel"
+        Style1_Panel.Size = New Size(690, 250)
+        Style1_Panel.TabIndex = 8
         ' 
-        ' Label5
+        ' BPM_Label
         ' 
-        Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.White
-        Label5.Location = New Point(544, 196)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(122, 35)
-        Label5.TabIndex = 16
-        Label5.Text = "Beat 114"
-        Label5.TextAlign = ContentAlignment.MiddleRight
+        BPM_Label.BackColor = Color.Transparent
+        BPM_Label.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BPM_Label.ForeColor = Color.White
+        BPM_Label.Location = New Point(544, 196)
+        BPM_Label.Name = "BPM_Label"
+        BPM_Label.Size = New Size(122, 35)
+        BPM_Label.TabIndex = 16
+        BPM_Label.Text = "Beat 114"
+        BPM_Label.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label4
+        ' DataType_Label
         ' 
-        Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(192, 196)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(205, 35)
-        Label4.TabIndex = 15
-        Label4.Text = "WAV-Audio"
-        Label4.TextAlign = ContentAlignment.MiddleLeft
+        DataType_Label.BackColor = Color.Transparent
+        DataType_Label.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataType_Label.ForeColor = Color.White
+        DataType_Label.Location = New Point(192, 196)
+        DataType_Label.Name = "DataType_Label"
+        DataType_Label.Size = New Size(205, 35)
+        DataType_Label.TabIndex = 15
+        DataType_Label.Text = "WAV-Audio"
+        DataType_Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label3
+        ' Family_Name
         ' 
-        Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(192, 24)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(498, 35)
-        Label3.TabIndex = 14
-        Label3.Text = "Kaan Arabic Pack"
-        Label3.TextAlign = ContentAlignment.MiddleLeft
+        Family_Name.BackColor = Color.Transparent
+        Family_Name.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Family_Name.ForeColor = Color.White
+        Family_Name.Location = New Point(192, 24)
+        Family_Name.Name = "Family_Name"
+        Family_Name.Size = New Size(498, 35)
+        Family_Name.TabIndex = 14
+        Family_Name.Text = "Kaan Arabic Pack"
+        Family_Name.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label2
+        ' Style_Name
         ' 
-        Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Adam Medium", 27.75F)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(210, 100)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(477, 51)
-        Label2.TabIndex = 13
-        Label2.Text = "Te Ma Etmaje"
-        Label2.TextAlign = ContentAlignment.MiddleLeft
+        Style_Name.BackColor = Color.Transparent
+        Style_Name.Font = New Font("Adam Medium", 27.75F)
+        Style_Name.ForeColor = Color.White
+        Style_Name.Location = New Point(210, 100)
+        Style_Name.Name = "Style_Name"
+        Style_Name.Size = New Size(477, 51)
+        Style_Name.TabIndex = 13
+        Style_Name.Text = "Te Ma Etmaje"
+        Style_Name.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label1
+        ' Style1_Label
         ' 
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Adam Medium", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(0, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(165, 250)
-        Label1.TabIndex = 12
-        Label1.Text = "Style 1"
-        Label1.TextAlign = ContentAlignment.MiddleCenter
+        Style1_Label.BackColor = Color.Transparent
+        Style1_Label.Font = New Font("Adam Medium", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Style1_Label.ForeColor = Color.White
+        Style1_Label.Location = New Point(0, 0)
+        Style1_Label.Name = "Style1_Label"
+        Style1_Label.Size = New Size(165, 250)
+        Style1_Label.TabIndex = 12
+        Style1_Label.Text = "Style 1"
+        Style1_Label.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Panel4
+        ' Style2_Panel
         ' 
-        Panel4.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Panel4.BackgroundImage = My.Resources.Resources.StyleTab_empty
-        Panel4.BackgroundImageLayout = ImageLayout.Stretch
-        Panel4.Controls.Add(Label6)
-        Panel4.Controls.Add(Label10)
-        Panel4.Controls.Add(Label7)
-        Panel4.Controls.Add(Label9)
-        Panel4.Controls.Add(Label8)
-        Panel4.Location = New Point(730, 160)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(690, 250)
-        Panel4.TabIndex = 9
+        Style2_Panel.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Style2_Panel.BackgroundImage = My.Resources.Resources.StyleTab_empty
+        Style2_Panel.BackgroundImageLayout = ImageLayout.Stretch
+        Style2_Panel.Controls.Add(BPM2_Label)
+        Style2_Panel.Controls.Add(Style2_Label)
+        Style2_Panel.Controls.Add(DataType2_Label)
+        Style2_Panel.Controls.Add(Style2_Name)
+        Style2_Panel.Controls.Add(Family2_Name)
+        Style2_Panel.Location = New Point(730, 160)
+        Style2_Panel.Name = "Style2_Panel"
+        Style2_Panel.Size = New Size(690, 250)
+        Style2_Panel.TabIndex = 9
         ' 
-        ' Label6
+        ' BPM2_Label
         ' 
-        Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label6.Location = New Point(544, 196)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(122, 35)
-        Label6.TabIndex = 21
-        Label6.Text = "Beat 120"
-        Label6.TextAlign = ContentAlignment.MiddleRight
+        BPM2_Label.BackColor = Color.Transparent
+        BPM2_Label.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BPM2_Label.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        BPM2_Label.Location = New Point(544, 196)
+        BPM2_Label.Name = "BPM2_Label"
+        BPM2_Label.Size = New Size(122, 35)
+        BPM2_Label.TabIndex = 21
+        BPM2_Label.Text = "Beat 120"
+        BPM2_Label.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label10
+        ' Style2_Label
         ' 
-        Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Adam Medium", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.Black
-        Label10.Location = New Point(0, 0)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(165, 250)
-        Label10.TabIndex = 17
-        Label10.Text = "Style 2"
-        Label10.TextAlign = ContentAlignment.MiddleCenter
+        Style2_Label.BackColor = Color.Transparent
+        Style2_Label.Font = New Font("Adam Medium", 26.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Style2_Label.ForeColor = Color.Black
+        Style2_Label.Location = New Point(0, 0)
+        Style2_Label.Name = "Style2_Label"
+        Style2_Label.Size = New Size(165, 250)
+        Style2_Label.TabIndex = 17
+        Style2_Label.Text = "Style 2"
+        Style2_Label.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label7
+        ' DataType2_Label
         ' 
-        Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label7.Location = New Point(192, 196)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(205, 35)
-        Label7.TabIndex = 20
-        Label7.Text = "ASP-Table"
-        Label7.TextAlign = ContentAlignment.MiddleLeft
+        DataType2_Label.BackColor = Color.Transparent
+        DataType2_Label.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataType2_Label.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataType2_Label.Location = New Point(192, 196)
+        DataType2_Label.Name = "DataType2_Label"
+        DataType2_Label.Size = New Size(205, 35)
+        DataType2_Label.TabIndex = 20
+        DataType2_Label.Text = "ASP-Table"
+        DataType2_Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label9
+        ' Style2_Name
         ' 
-        Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Adam Medium", 27.75F)
-        Label9.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label9.Location = New Point(210, 100)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(477, 51)
-        Label9.TabIndex = 18
-        Label9.Text = "Trance"
-        Label9.TextAlign = ContentAlignment.MiddleLeft
+        Style2_Name.BackColor = Color.Transparent
+        Style2_Name.Font = New Font("Adam Medium", 27.75F)
+        Style2_Name.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Style2_Name.Location = New Point(210, 100)
+        Style2_Name.Name = "Style2_Name"
+        Style2_Name.Size = New Size(477, 51)
+        Style2_Name.TabIndex = 18
+        Style2_Name.Text = "Trance"
+        Style2_Name.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label8
+        ' Family2_Name
         ' 
-        Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label8.Location = New Point(192, 24)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(498, 35)
-        Label8.TabIndex = 19
-        Label8.Text = "Dancefloor Styles"
-        Label8.TextAlign = ContentAlignment.MiddleLeft
+        Family2_Name.BackColor = Color.Transparent
+        Family2_Name.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Family2_Name.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Family2_Name.Location = New Point(192, 24)
+        Family2_Name.Name = "Family2_Name"
+        Family2_Name.Size = New Size(498, 35)
+        Family2_Name.TabIndex = 19
+        Family2_Name.Text = "Dancefloor Styles"
+        Family2_Name.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Panel5
         ' 
@@ -462,6 +529,66 @@ Partial Class Form1
         Panel6.Size = New Size(690, 270)
         Panel6.TabIndex = 9
         ' 
+        ' Label30
+        ' 
+        Label30.BackColor = Color.Transparent
+        Label30.Font = New Font("Adam Medium", 20.0F)
+        Label30.ForeColor = Color.White
+        Label30.Location = New Point(540, 20)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(64, 35)
+        Label30.TabIndex = 20
+        Label30.Text = "4/4"
+        Label30.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label29
+        ' 
+        Label29.BackColor = Color.Transparent
+        Label29.Font = New Font("Adam Medium", 20.0F)
+        Label29.ForeColor = Color.White
+        Label29.Location = New Point(620, 20)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(51, 35)
+        Label29.TabIndex = 17
+        Label29.Text = "114"
+        Label29.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label26
+        ' 
+        Label26.BackColor = Color.Transparent
+        Label26.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label26.ForeColor = Color.White
+        Label26.Location = New Point(20, 220)
+        Label26.Name = "Label26"
+        Label26.Size = New Size(650, 35)
+        Label26.TabIndex = 19
+        Label26.Text = "Extensions - Kaan Arabic Pack"
+        Label26.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label28
+        ' 
+        Label28.BackColor = Color.Transparent
+        Label28.Font = New Font("Adam Medium", 27.75F)
+        Label28.ForeColor = Color.White
+        Label28.Location = New Point(40, 110)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(630, 50)
+        Label28.TabIndex = 17
+        Label28.Text = "Oriental Voices 21"
+        Label28.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label27
+        ' 
+        Label27.BackColor = Color.Transparent
+        Label27.Font = New Font("Adam Medium", 20.0F)
+        Label27.ForeColor = Color.White
+        Label27.Location = New Point(20, 20)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(167, 35)
+        Label27.TabIndex = 18
+        Label27.Text = "Multi-Pad"
+        Label27.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' Panel7
         ' 
         Panel7.BackColor = Color.FromArgb(CByte(0), CByte(112), CByte(192))
@@ -530,17 +657,17 @@ Partial Class Form1
         Label16.Text = "Off - Style Mode"
         Label16.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label11
+        ' Current_BPM
         ' 
-        Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("SF UI Display Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.White
-        Label11.Location = New Point(20, 14)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(74, 35)
-        Label11.TabIndex = 17
-        Label11.Text = "114"
-        Label11.TextAlign = ContentAlignment.MiddleLeft
+        Current_BPM.BackColor = Color.Transparent
+        Current_BPM.Font = New Font("SF UI Display Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Current_BPM.ForeColor = Color.White
+        Current_BPM.Location = New Point(20, 14)
+        Current_BPM.Name = "Current_BPM"
+        Current_BPM.Size = New Size(74, 35)
+        Current_BPM.TabIndex = 17
+        Current_BPM.Text = "114"
+        Current_BPM.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label12
         ' 
@@ -554,133 +681,567 @@ Partial Class Form1
         Label12.Text = "18:43"
         Label12.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' PictureBox8
+        ' Beat1
         ' 
-        PictureBox8.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
-        PictureBox8.Location = New Point(130, 25)
-        PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(75, 12)
-        PictureBox8.TabIndex = 19
-        PictureBox8.TabStop = False
+        Beat1.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
+        Beat1.Location = New Point(130, 25)
+        Beat1.Name = "Beat1"
+        Beat1.Size = New Size(75, 12)
+        Beat1.TabIndex = 19
+        Beat1.TabStop = False
         ' 
-        ' PictureBox9
+        ' Beat2
         ' 
-        PictureBox9.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
-        PictureBox9.Location = New Point(215, 25)
-        PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(75, 12)
-        PictureBox9.TabIndex = 20
-        PictureBox9.TabStop = False
+        Beat2.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
+        Beat2.Location = New Point(215, 25)
+        Beat2.Name = "Beat2"
+        Beat2.Size = New Size(75, 12)
+        Beat2.TabIndex = 20
+        Beat2.TabStop = False
         ' 
-        ' PictureBox10
+        ' Beat4
         ' 
-        PictureBox10.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
-        PictureBox10.Location = New Point(385, 25)
-        PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(75, 12)
-        PictureBox10.TabIndex = 22
-        PictureBox10.TabStop = False
+        Beat4.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
+        Beat4.Location = New Point(385, 25)
+        Beat4.Name = "Beat4"
+        Beat4.Size = New Size(75, 12)
+        Beat4.TabIndex = 22
+        Beat4.TabStop = False
         ' 
-        ' PictureBox11
+        ' Beat3
         ' 
-        PictureBox11.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
-        PictureBox11.Location = New Point(300, 25)
-        PictureBox11.Name = "PictureBox11"
-        PictureBox11.Size = New Size(75, 12)
-        PictureBox11.TabIndex = 21
-        PictureBox11.TabStop = False
+        Beat3.BackColor = Color.FromArgb(CByte(89), CByte(89), CByte(89))
+        Beat3.Location = New Point(300, 25)
+        Beat3.Name = "Beat3"
+        Beat3.Size = New Size(75, 12)
+        Beat3.TabIndex = 21
+        Beat3.TabStop = False
         ' 
-        ' Label25
+        ' DasLabel
         ' 
-        Label25.BackColor = Color.Transparent
-        Label25.Font = New Font("SF UI Display Light", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.ForeColor = Color.White
-        Label25.Location = New Point(487, 13)
-        Label25.Name = "Label25"
-        Label25.Size = New Size(42, 35)
-        Label25.TabIndex = 23
-        Label25.Text = "-"
-        Label25.TextAlign = ContentAlignment.MiddleLeft
+        DasLabel.BackColor = Color.Transparent
+        DasLabel.Font = New Font("SF UI Display Light", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DasLabel.ForeColor = Color.White
+        DasLabel.Location = New Point(487, 13)
+        DasLabel.Name = "DasLabel"
+        DasLabel.Size = New Size(42, 35)
+        DasLabel.TabIndex = 23
+        DasLabel.Text = "-"
+        DasLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label26
+        ' Touch_Control
         ' 
-        Label26.BackColor = Color.Transparent
-        Label26.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label26.ForeColor = Color.White
-        Label26.Location = New Point(20, 220)
-        Label26.Name = "Label26"
-        Label26.Size = New Size(650, 35)
-        Label26.TabIndex = 19
-        Label26.Text = "Extensions - Kaan Arabic Pack"
-        Label26.TextAlign = ContentAlignment.MiddleLeft
+        Touch_Control.BackColor = Color.Black
+        Touch_Control.Controls.Add(IntroLED3)
+        Touch_Control.Controls.Add(IntroLED2)
+        Touch_Control.Controls.Add(Label37)
+        Touch_Control.Controls.Add(Label36)
+        Touch_Control.Controls.Add(Label35)
+        Touch_Control.Controls.Add(Label34)
+        Touch_Control.Controls.Add(Label33)
+        Touch_Control.Controls.Add(BreakButton)
+        Touch_Control.Controls.Add(Main4Button)
+        Touch_Control.Controls.Add(Outro3Button)
+        Touch_Control.Controls.Add(Outro2Button)
+        Touch_Control.Controls.Add(Outro1Button)
+        Touch_Control.Controls.Add(Main3Button)
+        Touch_Control.Controls.Add(Main2Button)
+        Touch_Control.Controls.Add(Main1Button)
+        Touch_Control.Controls.Add(Intro3Button)
+        Touch_Control.Controls.Add(Intro2Button)
+        Touch_Control.Controls.Add(Intro1Button)
+        Touch_Control.Controls.Add(PlayPauseButton)
+        Touch_Control.Controls.Add(PlayPauseLED)
+        Touch_Control.Controls.Add(BreakLED)
+        Touch_Control.Controls.Add(MainLED4)
+        Touch_Control.Controls.Add(OutroLED3)
+        Touch_Control.Controls.Add(OutroLED2)
+        Touch_Control.Controls.Add(OutroLED1)
+        Touch_Control.Controls.Add(MainLED3)
+        Touch_Control.Controls.Add(MainLED2)
+        Touch_Control.Controls.Add(MainLED1)
+        Touch_Control.Controls.Add(IntroLED1)
+        Touch_Control.Controls.Add(Break)
+        Touch_Control.Controls.Add(Outro3)
+        Touch_Control.Controls.Add(Outro2)
+        Touch_Control.Controls.Add(Outro1)
+        Touch_Control.Controls.Add(Main4)
+        Touch_Control.Controls.Add(Main3)
+        Touch_Control.Controls.Add(Main2)
+        Touch_Control.Controls.Add(Main1)
+        Touch_Control.Controls.Add(Intro3)
+        Touch_Control.Controls.Add(Intro2)
+        Touch_Control.Controls.Add(Intro1)
+        Touch_Control.Controls.Add(Play_Pause)
+        Touch_Control.Location = New Point(0, 640)
+        Touch_Control.Name = "Touch_Control"
+        Touch_Control.Size = New Size(1440, 260)
+        Touch_Control.TabIndex = 8
         ' 
-        ' Label27
+        ' IntroLED3
         ' 
-        Label27.BackColor = Color.Transparent
-        Label27.Font = New Font("Adam Medium", 20F)
-        Label27.ForeColor = Color.White
-        Label27.Location = New Point(20, 20)
-        Label27.Name = "Label27"
-        Label27.Size = New Size(167, 35)
-        Label27.TabIndex = 18
-        Label27.Text = "Multi-Pad"
-        Label27.TextAlign = ContentAlignment.MiddleLeft
+        IntroLED3.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        IntroLED3.BackgroundImageLayout = ImageLayout.Stretch
+        IntroLED3.Location = New Point(400, 192)
+        IntroLED3.Name = "IntroLED3"
+        IntroLED3.Size = New Size(80, 15)
+        IntroLED3.TabIndex = 39
+        IntroLED3.TabStop = False
         ' 
-        ' Label28
+        ' IntroLED2
         ' 
-        Label28.BackColor = Color.Transparent
-        Label28.Font = New Font("Adam Medium", 27.75F)
-        Label28.ForeColor = Color.White
-        Label28.Location = New Point(40, 110)
-        Label28.Name = "Label28"
-        Label28.Size = New Size(630, 50)
-        Label28.TabIndex = 17
-        Label28.Text = "Oriental Voices 21"
-        Label28.TextAlign = ContentAlignment.MiddleLeft
+        IntroLED2.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        IntroLED2.BackgroundImageLayout = ImageLayout.Stretch
+        IntroLED2.Location = New Point(300, 192)
+        IntroLED2.Name = "IntroLED2"
+        IntroLED2.Size = New Size(80, 15)
+        IntroLED2.TabIndex = 38
+        IntroLED2.TabStop = False
         ' 
-        ' Label29
+        ' Label37
         ' 
-        Label29.BackColor = Color.Transparent
-        Label29.Font = New Font("Adam Medium", 20F)
-        Label29.ForeColor = Color.White
-        Label29.Location = New Point(620, 20)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(51, 35)
-        Label29.TabIndex = 17
-        Label29.Text = "114"
-        Label29.TextAlign = ContentAlignment.MiddleRight
+        Label37.BackColor = Color.Transparent
+        Label37.Font = New Font("Adam Medium", 24.0F)
+        Label37.ForeColor = Color.Red
+        Label37.Location = New Point(1366, 12)
+        Label37.Name = "Label37"
+        Label37.Size = New Size(62, 41)
+        Label37.TabIndex = 28
+        Label37.Text = "X"
+        Label37.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' Label30
+        ' Label36
         ' 
-        Label30.BackColor = Color.Transparent
-        Label30.Font = New Font("Adam Medium", 20F)
-        Label30.ForeColor = Color.White
-        Label30.Location = New Point(540, 20)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(64, 35)
-        Label30.TabIndex = 20
-        Label30.Text = "4/4"
-        Label30.TextAlign = ContentAlignment.MiddleRight
+        Label36.BackColor = Color.Transparent
+        Label36.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label36.ForeColor = Color.White
+        Label36.Location = New Point(1095, 40)
+        Label36.Name = "Label36"
+        Label36.Size = New Size(190, 35)
+        Label36.TabIndex = 37
+        Label36.Text = "Outro"
+        Label36.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label35
+        ' 
+        Label35.BackColor = Color.Transparent
+        Label35.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label35.ForeColor = Color.White
+        Label35.Location = New Point(955, 40)
+        Label35.Name = "Label35"
+        Label35.Size = New Size(90, 35)
+        Label35.TabIndex = 36
+        Label35.Text = "Break"
+        Label35.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label34
+        ' 
+        Label34.BackColor = Color.Transparent
+        Label34.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label34.ForeColor = Color.White
+        Label34.Location = New Point(525, 40)
+        Label34.Name = "Label34"
+        Label34.Size = New Size(190, 35)
+        Label34.TabIndex = 35
+        Label34.Text = "Main"
+        Label34.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Label33
+        ' 
+        Label33.BackColor = Color.Transparent
+        Label33.Font = New Font("Adam Medium", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.ForeColor = Color.White
+        Label33.Location = New Point(195, 40)
+        Label33.Name = "Label33"
+        Label33.Size = New Size(190, 35)
+        Label33.TabIndex = 17
+        Label33.Text = "Intro"
+        Label33.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' BreakButton
+        ' 
+        BreakButton.BackColor = Color.Transparent
+        BreakButton.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BreakButton.ForeColor = Color.White
+        BreakButton.Location = New Point(960, 96)
+        BreakButton.Name = "BreakButton"
+        BreakButton.Size = New Size(80, 90)
+        BreakButton.TabIndex = 34
+        BreakButton.Text = "-/-"
+        BreakButton.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Main4Button
+        ' 
+        Main4Button.BackColor = Color.Transparent
+        Main4Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Main4Button.ForeColor = Color.White
+        Main4Button.Location = New Point(830, 97)
+        Main4Button.Name = "Main4Button"
+        Main4Button.Size = New Size(80, 90)
+        Main4Button.TabIndex = 33
+        Main4Button.Text = "D"
+        Main4Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Outro3Button
+        ' 
+        Outro3Button.BackColor = Color.Transparent
+        Outro3Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Outro3Button.ForeColor = Color.White
+        Outro3Button.Location = New Point(1300, 97)
+        Outro3Button.Name = "Outro3Button"
+        Outro3Button.Size = New Size(80, 90)
+        Outro3Button.TabIndex = 32
+        Outro3Button.Text = "3"
+        Outro3Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Outro2Button
+        ' 
+        Outro2Button.BackColor = Color.Transparent
+        Outro2Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Outro2Button.ForeColor = Color.White
+        Outro2Button.Location = New Point(1200, 97)
+        Outro2Button.Name = "Outro2Button"
+        Outro2Button.Size = New Size(80, 90)
+        Outro2Button.TabIndex = 31
+        Outro2Button.Text = "2"
+        Outro2Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Outro1Button
+        ' 
+        Outro1Button.BackColor = Color.Transparent
+        Outro1Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Outro1Button.ForeColor = Color.White
+        Outro1Button.Location = New Point(1100, 97)
+        Outro1Button.Name = "Outro1Button"
+        Outro1Button.Size = New Size(80, 90)
+        Outro1Button.TabIndex = 30
+        Outro1Button.Text = "1"
+        Outro1Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Main3Button
+        ' 
+        Main3Button.BackColor = Color.Transparent
+        Main3Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Main3Button.ForeColor = Color.White
+        Main3Button.Location = New Point(730, 97)
+        Main3Button.Name = "Main3Button"
+        Main3Button.Size = New Size(80, 90)
+        Main3Button.TabIndex = 29
+        Main3Button.Text = "C"
+        Main3Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Main2Button
+        ' 
+        Main2Button.BackColor = Color.Transparent
+        Main2Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Main2Button.ForeColor = Color.White
+        Main2Button.Location = New Point(630, 97)
+        Main2Button.Name = "Main2Button"
+        Main2Button.Size = New Size(80, 90)
+        Main2Button.TabIndex = 28
+        Main2Button.Text = "B"
+        Main2Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Main1Button
+        ' 
+        Main1Button.BackColor = Color.Transparent
+        Main1Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Main1Button.ForeColor = Color.White
+        Main1Button.Location = New Point(530, 97)
+        Main1Button.Name = "Main1Button"
+        Main1Button.Size = New Size(80, 90)
+        Main1Button.TabIndex = 27
+        Main1Button.Text = "A"
+        Main1Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Intro3Button
+        ' 
+        Intro3Button.BackColor = Color.Transparent
+        Intro3Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Intro3Button.ForeColor = Color.White
+        Intro3Button.Location = New Point(400, 97)
+        Intro3Button.Name = "Intro3Button"
+        Intro3Button.Size = New Size(80, 90)
+        Intro3Button.TabIndex = 26
+        Intro3Button.Text = "3"
+        Intro3Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Intro2Button
+        ' 
+        Intro2Button.BackColor = Color.Transparent
+        Intro2Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Intro2Button.ForeColor = Color.White
+        Intro2Button.Location = New Point(300, 97)
+        Intro2Button.Name = "Intro2Button"
+        Intro2Button.Size = New Size(80, 90)
+        Intro2Button.TabIndex = 25
+        Intro2Button.Text = "2"
+        Intro2Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Intro1Button
+        ' 
+        Intro1Button.BackColor = Color.Transparent
+        Intro1Button.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Intro1Button.ForeColor = Color.White
+        Intro1Button.Location = New Point(200, 97)
+        Intro1Button.Name = "Intro1Button"
+        Intro1Button.Size = New Size(80, 90)
+        Intro1Button.TabIndex = 24
+        Intro1Button.Text = "1"
+        Intro1Button.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' PlayPauseButton
+        ' 
+        PlayPauseButton.BackColor = Color.Transparent
+        PlayPauseButton.Font = New Font("Adam Medium", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PlayPauseButton.ForeColor = Color.Red
+        PlayPauseButton.Location = New Point(60, 97)
+        PlayPauseButton.Name = "PlayPauseButton"
+        PlayPauseButton.Size = New Size(90, 90)
+        PlayPauseButton.TabIndex = 17
+        PlayPauseButton.Text = "Start"
+        PlayPauseButton.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' PlayPauseLED
+        ' 
+        PlayPauseLED.BackColor = Color.FromArgb(CByte(237), CByte(119), CByte(1))
+        PlayPauseLED.BackgroundImageLayout = ImageLayout.Stretch
+        PlayPauseLED.Location = New Point(60, 192)
+        PlayPauseLED.Name = "PlayPauseLED"
+        PlayPauseLED.Size = New Size(90, 15)
+        PlayPauseLED.TabIndex = 23
+        PlayPauseLED.TabStop = False
+        ' 
+        ' BreakLED
+        ' 
+        BreakLED.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        BreakLED.BackgroundImageLayout = ImageLayout.Stretch
+        BreakLED.Location = New Point(960, 192)
+        BreakLED.Name = "BreakLED"
+        BreakLED.Size = New Size(80, 15)
+        BreakLED.TabIndex = 22
+        BreakLED.TabStop = False
+        ' 
+        ' MainLED4
+        ' 
+        MainLED4.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        MainLED4.BackgroundImageLayout = ImageLayout.Stretch
+        MainLED4.Location = New Point(830, 192)
+        MainLED4.Name = "MainLED4"
+        MainLED4.Size = New Size(80, 15)
+        MainLED4.TabIndex = 21
+        MainLED4.TabStop = False
+        ' 
+        ' OutroLED3
+        ' 
+        OutroLED3.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        OutroLED3.BackgroundImageLayout = ImageLayout.Stretch
+        OutroLED3.Location = New Point(1300, 192)
+        OutroLED3.Name = "OutroLED3"
+        OutroLED3.Size = New Size(80, 15)
+        OutroLED3.TabIndex = 20
+        OutroLED3.TabStop = False
+        ' 
+        ' OutroLED2
+        ' 
+        OutroLED2.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        OutroLED2.BackgroundImageLayout = ImageLayout.Stretch
+        OutroLED2.Location = New Point(1200, 192)
+        OutroLED2.Name = "OutroLED2"
+        OutroLED2.Size = New Size(80, 15)
+        OutroLED2.TabIndex = 19
+        OutroLED2.TabStop = False
+        ' 
+        ' OutroLED1
+        ' 
+        OutroLED1.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        OutroLED1.BackgroundImageLayout = ImageLayout.Stretch
+        OutroLED1.Location = New Point(1100, 192)
+        OutroLED1.Name = "OutroLED1"
+        OutroLED1.Size = New Size(80, 15)
+        OutroLED1.TabIndex = 18
+        OutroLED1.TabStop = False
+        ' 
+        ' MainLED3
+        ' 
+        MainLED3.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        MainLED3.BackgroundImageLayout = ImageLayout.Stretch
+        MainLED3.Location = New Point(730, 192)
+        MainLED3.Name = "MainLED3"
+        MainLED3.Size = New Size(80, 15)
+        MainLED3.TabIndex = 17
+        MainLED3.TabStop = False
+        ' 
+        ' MainLED2
+        ' 
+        MainLED2.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        MainLED2.BackgroundImageLayout = ImageLayout.Stretch
+        MainLED2.Location = New Point(630, 192)
+        MainLED2.Name = "MainLED2"
+        MainLED2.Size = New Size(80, 15)
+        MainLED2.TabIndex = 16
+        MainLED2.TabStop = False
+        ' 
+        ' MainLED1
+        ' 
+        MainLED1.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        MainLED1.BackgroundImageLayout = ImageLayout.Stretch
+        MainLED1.Location = New Point(530, 192)
+        MainLED1.Name = "MainLED1"
+        MainLED1.Size = New Size(80, 15)
+        MainLED1.TabIndex = 15
+        MainLED1.TabStop = False
+        ' 
+        ' IntroLED1
+        ' 
+        IntroLED1.BackColor = Color.FromArgb(CByte(102), CByte(246), CByte(159))
+        IntroLED1.BackgroundImageLayout = ImageLayout.Stretch
+        IntroLED1.Location = New Point(200, 192)
+        IntroLED1.Name = "IntroLED1"
+        IntroLED1.Size = New Size(80, 15)
+        IntroLED1.TabIndex = 12
+        IntroLED1.TabStop = False
+        ' 
+        ' Break
+        ' 
+        Break.BackgroundImage = My.Resources.Resources.Button_Standard
+        Break.BackgroundImageLayout = ImageLayout.Stretch
+        Break.Location = New Point(955, 92)
+        Break.Name = "Break"
+        Break.Size = New Size(90, 120)
+        Break.TabIndex = 11
+        Break.TabStop = False
+        ' 
+        ' Outro3
+        ' 
+        Outro3.BackgroundImage = My.Resources.Resources.Button_Standard
+        Outro3.BackgroundImageLayout = ImageLayout.Stretch
+        Outro3.Location = New Point(1295, 92)
+        Outro3.Name = "Outro3"
+        Outro3.Size = New Size(90, 120)
+        Outro3.TabIndex = 10
+        Outro3.TabStop = False
+        ' 
+        ' Outro2
+        ' 
+        Outro2.BackgroundImage = My.Resources.Resources.Button_Standard
+        Outro2.BackgroundImageLayout = ImageLayout.Stretch
+        Outro2.Location = New Point(1195, 92)
+        Outro2.Name = "Outro2"
+        Outro2.Size = New Size(90, 120)
+        Outro2.TabIndex = 9
+        Outro2.TabStop = False
+        ' 
+        ' Outro1
+        ' 
+        Outro1.BackgroundImage = My.Resources.Resources.Button_Standard
+        Outro1.BackgroundImageLayout = ImageLayout.Stretch
+        Outro1.Location = New Point(1095, 92)
+        Outro1.Name = "Outro1"
+        Outro1.Size = New Size(90, 120)
+        Outro1.TabIndex = 8
+        Outro1.TabStop = False
+        ' 
+        ' Main4
+        ' 
+        Main4.BackgroundImage = My.Resources.Resources.Button_Standard
+        Main4.BackgroundImageLayout = ImageLayout.Stretch
+        Main4.Location = New Point(825, 92)
+        Main4.Name = "Main4"
+        Main4.Size = New Size(90, 120)
+        Main4.TabIndex = 7
+        Main4.TabStop = False
+        ' 
+        ' Main3
+        ' 
+        Main3.BackgroundImage = My.Resources.Resources.Button_Standard
+        Main3.BackgroundImageLayout = ImageLayout.Stretch
+        Main3.Location = New Point(725, 92)
+        Main3.Name = "Main3"
+        Main3.Size = New Size(90, 120)
+        Main3.TabIndex = 6
+        Main3.TabStop = False
+        ' 
+        ' Main2
+        ' 
+        Main2.BackgroundImage = My.Resources.Resources.Button_Standard
+        Main2.BackgroundImageLayout = ImageLayout.Stretch
+        Main2.Location = New Point(625, 92)
+        Main2.Name = "Main2"
+        Main2.Size = New Size(90, 120)
+        Main2.TabIndex = 5
+        Main2.TabStop = False
+        ' 
+        ' Main1
+        ' 
+        Main1.BackgroundImage = My.Resources.Resources.Button_Standard
+        Main1.BackgroundImageLayout = ImageLayout.Stretch
+        Main1.Location = New Point(525, 92)
+        Main1.Name = "Main1"
+        Main1.Size = New Size(90, 120)
+        Main1.TabIndex = 4
+        Main1.TabStop = False
+        ' 
+        ' Intro3
+        ' 
+        Intro3.BackgroundImage = My.Resources.Resources.Button_Standard
+        Intro3.BackgroundImageLayout = ImageLayout.Stretch
+        Intro3.Location = New Point(395, 92)
+        Intro3.Name = "Intro3"
+        Intro3.Size = New Size(90, 120)
+        Intro3.TabIndex = 3
+        Intro3.TabStop = False
+        ' 
+        ' Intro2
+        ' 
+        Intro2.BackgroundImage = My.Resources.Resources.Button_Standard
+        Intro2.BackgroundImageLayout = ImageLayout.Stretch
+        Intro2.Location = New Point(295, 92)
+        Intro2.Name = "Intro2"
+        Intro2.Size = New Size(90, 120)
+        Intro2.TabIndex = 2
+        Intro2.TabStop = False
+        ' 
+        ' Intro1
+        ' 
+        Intro1.BackgroundImage = My.Resources.Resources.Button_Standard
+        Intro1.BackgroundImageLayout = ImageLayout.Stretch
+        Intro1.Location = New Point(195, 92)
+        Intro1.Name = "Intro1"
+        Intro1.Size = New Size(90, 120)
+        Intro1.TabIndex = 1
+        Intro1.TabStop = False
+        ' 
+        ' Play_Pause
+        ' 
+        Play_Pause.BackgroundImage = My.Resources.Resources.Play_Pause
+        Play_Pause.BackgroundImageLayout = ImageLayout.Stretch
+        Play_Pause.Location = New Point(55, 92)
+        Play_Pause.Name = "Play_Pause"
+        Play_Pause.Size = New Size(100, 120)
+        Play_Pause.TabIndex = 0
+        Play_Pause.TabStop = False
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(1440, 900)
-        Controls.Add(Label25)
-        Controls.Add(PictureBox10)
-        Controls.Add(PictureBox11)
-        Controls.Add(PictureBox9)
-        Controls.Add(PictureBox8)
+        Controls.Add(Touch_Control)
+        Controls.Add(DasLabel)
+        Controls.Add(Beat4)
+        Controls.Add(Beat3)
+        Controls.Add(Beat2)
+        Controls.Add(Beat1)
         Controls.Add(Label12)
-        Controls.Add(Label11)
+        Controls.Add(Current_BPM)
         Controls.Add(Panel8)
         Controls.Add(Panel7)
         Controls.Add(Panel6)
         Controls.Add(Panel5)
-        Controls.Add(Panel4)
-        Controls.Add(Panel3)
+        Controls.Add(Style2_Panel)
+        Controls.Add(Style1_Panel)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(HORLINE)
@@ -701,17 +1262,42 @@ Partial Class Form1
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         CType(HORLINE, ComponentModel.ISupportInitialize).EndInit()
-        Panel3.ResumeLayout(False)
-        Panel4.ResumeLayout(False)
+        Style1_Panel.ResumeLayout(False)
+        Style2_Panel.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
         Panel7.ResumeLayout(False)
         Panel8.ResumeLayout(False)
-        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
+        CType(Beat1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Beat2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Beat4, ComponentModel.ISupportInitialize).EndInit()
+        CType(Beat3, ComponentModel.ISupportInitialize).EndInit()
+        Touch_Control.ResumeLayout(False)
+        CType(IntroLED3, ComponentModel.ISupportInitialize).EndInit()
+        CType(IntroLED2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PlayPauseLED, ComponentModel.ISupportInitialize).EndInit()
+        CType(BreakLED, ComponentModel.ISupportInitialize).EndInit()
+        CType(MainLED4, ComponentModel.ISupportInitialize).EndInit()
+        CType(OutroLED3, ComponentModel.ISupportInitialize).EndInit()
+        CType(OutroLED2, ComponentModel.ISupportInitialize).EndInit()
+        CType(OutroLED1, ComponentModel.ISupportInitialize).EndInit()
+        CType(MainLED3, ComponentModel.ISupportInitialize).EndInit()
+        CType(MainLED2, ComponentModel.ISupportInitialize).EndInit()
+        CType(MainLED1, ComponentModel.ISupportInitialize).EndInit()
+        CType(IntroLED1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Break, ComponentModel.ISupportInitialize).EndInit()
+        CType(Outro3, ComponentModel.ISupportInitialize).EndInit()
+        CType(Outro2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Outro1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Main4, ComponentModel.ISupportInitialize).EndInit()
+        CType(Main3, ComponentModel.ISupportInitialize).EndInit()
+        CType(Main2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Main1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Intro3, ComponentModel.ISupportInitialize).EndInit()
+        CType(Intro2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Intro1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Play_Pause, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -724,23 +1310,22 @@ Partial Class Form1
     Friend WithEvents HORLINE As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Style1_Panel As Panel
+    Friend WithEvents Style2_Panel As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents Style_Name As Label
+    Friend WithEvents Style1_Label As Label
+    Friend WithEvents BPM_Label As Label
+    Friend WithEvents Family_Name As Label
+    Friend WithEvents BPM2_Label As Label
+    Friend WithEvents Style2_Label As Label
+    Friend WithEvents DataType2_Label As Label
+    Friend WithEvents Style2_Name As Label
+    Friend WithEvents Family2_Name As Label
+    Friend WithEvents Current_BPM As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label15 As Label
@@ -755,15 +1340,60 @@ Partial Class Form1
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents Label25 As Label
+    Friend WithEvents Beat1 As PictureBox
+    Friend WithEvents Beat2 As PictureBox
+    Friend WithEvents Beat4 As PictureBox
+    Friend WithEvents Beat3 As PictureBox
+    Friend WithEvents DasLabel As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label29 As Label
+    Friend WithEvents Touch_Control As Panel
+    Friend WithEvents Outro3 As PictureBox
+    Friend WithEvents Outro2 As PictureBox
+    Friend WithEvents Outro1 As PictureBox
+    Friend WithEvents Main4 As PictureBox
+    Friend WithEvents Main3 As PictureBox
+    Friend WithEvents Main2 As PictureBox
+    Friend WithEvents Main1 As PictureBox
+    Friend WithEvents Intro3 As PictureBox
+    Friend WithEvents Intro2 As PictureBox
+    Friend WithEvents Intro1 As PictureBox
+    Friend WithEvents Play_Pause As PictureBox
+    Friend WithEvents Break As PictureBox
+    Friend WithEvents Intro2Button As Label
+    Friend WithEvents Intro1Button As Label
+    Friend WithEvents PlayPauseButton As Label
+    Friend WithEvents PlayPauseLED As PictureBox
+    Friend WithEvents BreakLED As PictureBox
+    Friend WithEvents MainLED4 As PictureBox
+    Friend WithEvents OutroLED3 As PictureBox
+    Friend WithEvents OutroLED2 As PictureBox
+    Friend WithEvents OutroLED1 As PictureBox
+    Friend WithEvents MainLED3 As PictureBox
+    Friend WithEvents MainLED2 As PictureBox
+    Friend WithEvents MainLED1 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents IntroLED1 As PictureBox
+    Friend WithEvents DataType_Label As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents BreakButton As Label
+    Friend WithEvents Main4Button As Label
+    Friend WithEvents Outro3Button As Label
+    Friend WithEvents Outro2Button As Label
+    Friend WithEvents Outro1Button As Label
+    Friend WithEvents Main3Button As Label
+    Friend WithEvents Main2Button As Label
+    Friend WithEvents Main1Button As Label
+    Friend WithEvents Intro3Button As Label
+    Friend WithEvents IntroLED3 As PictureBox
+    Friend WithEvents IntroLED2 As PictureBox
 
 End Class

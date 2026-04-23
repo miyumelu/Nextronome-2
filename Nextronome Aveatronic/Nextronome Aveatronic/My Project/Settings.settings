@@ -5,5 +5,14 @@
     <Setting Name="BPMCalcVal" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">60000</Value>
     </Setting>
+    <Setting Name="Style1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Style2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FKey" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
