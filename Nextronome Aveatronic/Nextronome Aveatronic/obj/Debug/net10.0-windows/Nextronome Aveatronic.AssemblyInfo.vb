@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Nextronome Aveatronic"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5aea7bbc5074ac1aefd22600d3ccb05ab04bbac"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95f0f37e35a0377239cd454d6233a8837dd34895"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Nextronome Aveatronic"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Nextronome Aveatronic"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

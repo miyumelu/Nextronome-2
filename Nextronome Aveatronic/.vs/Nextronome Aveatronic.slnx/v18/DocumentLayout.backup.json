@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\my project\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\mainpage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\mainpage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\nextronome aveatronic\\my project\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
       "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\my project\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\lgsdk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\lgsdk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\nextronome aveatronic.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\nextronome aveatronic.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\core.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\core.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\mainpage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\mainpage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\splashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -43,8 +31,20 @@
       "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\splashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\styleselect.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\core.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\core.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|c:\\users\\deniz\\documents\\github\\nextronome-2\\nextronome aveatronic\\nextronome aveatronic\\lgsdk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{64C2576A-0766-6A0A-825F-69F607BA724F}|Nextronome Aveatronic\\Nextronome Aveatronic.vbproj|solutionrelative:nextronome aveatronic\\lgsdk.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,19 +62,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Styleselect.vb [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb",
-              "RelativeDocumentMoniker": "Nextronome Aveatronic\\Styleselect.vb",
-              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb [Entwurf]",
-              "RelativeToolTip": "Nextronome Aveatronic\\Styleselect.vb [Entwurf]",
+              "DocumentIndex": 0,
+              "Title": "Application.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\My Project\\Application.Designer.vb",
+              "RelativeDocumentMoniker": "Nextronome Aveatronic\\My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\My Project\\Application.Designer.vb",
+              "RelativeToolTip": "Nextronome Aveatronic\\My Project\\Application.Designer.vb",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-04-23T00:36:22.59Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2026-04-23T23:18:08.334Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "LGSDK.vb",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\LGSDK.vb",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\LGSDK.vb",
@@ -82,25 +83,24 @@
               "RelativeToolTip": "Nextronome Aveatronic\\LGSDK.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-04-23T00:21:08.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T00:21:08.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.vb",
-              "RelativeDocumentMoniker": "Nextronome Aveatronic\\Form1.vb",
-              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.vb*",
-              "RelativeToolTip": "Nextronome Aveatronic\\Form1.vb*",
-              "ViewState": "AgIAANQBAAAAAAAAAAAmwOsBAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainPage.vb",
+              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\MainPage.vb",
+              "RelativeDocumentMoniker": "Nextronome Aveatronic\\MainPage.vb",
+              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\MainPage.vb*",
+              "RelativeToolTip": "Nextronome Aveatronic\\MainPage.vb*",
+              "ViewState": "AgIAAL4BAAAAAAAAAAAswNoBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-21T22:04:44.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\My Project\\Settings.settings",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\My Project\\Settings.settings",
@@ -112,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Nextronome Aveatronic",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Nextronome Aveatronic.vbproj",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\Nextronome Aveatronic.vbproj",
@@ -124,39 +124,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Core.vb",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Core.vb",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\Core.vb",
               "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Core.vb",
               "RelativeToolTip": "Nextronome Aveatronic\\Core.vb",
-              "ViewState": "AgIAADUCAAAAAAAAAAAcwDsCAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAHACAAAAAAAAAAAqwGkCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-21T22:19:46.666Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Styleselect.vb",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\Styleselect.vb",
               "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb",
               "RelativeToolTip": "Nextronome Aveatronic\\Styleselect.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-23T00:39:39.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Splashscreen.vb",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Splashscreen.vb",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\Splashscreen.vb",
               "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Splashscreen.vb",
               "RelativeToolTip": "Nextronome Aveatronic\\Splashscreen.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-21T23:50:27.247Z",
               "EditorCaption": ""
@@ -180,24 +180,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form1.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.Designer.vb",
-              "RelativeDocumentMoniker": "Nextronome Aveatronic\\Form1.Designer.vb",
-              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.Designer.vb",
-              "RelativeToolTip": "Nextronome Aveatronic\\Form1.Designer.vb",
-              "ViewState": "AgIAAO4EAAAAAAAAAAApwBQFAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-04-23T00:05:16.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Splashscreen.vb [Entwurf]",
               "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Splashscreen.vb",
               "RelativeDocumentMoniker": "Nextronome Aveatronic\\Splashscreen.vb",
@@ -209,14 +196,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.vb [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.vb",
-              "RelativeDocumentMoniker": "Nextronome Aveatronic\\Form1.vb",
-              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Form1.vb [Entwurf]*",
-              "RelativeToolTip": "Nextronome Aveatronic\\Form1.vb [Entwurf]*",
+              "DocumentIndex": 1,
+              "Title": "MainPage.vb [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\MainPage.vb",
+              "RelativeDocumentMoniker": "Nextronome Aveatronic\\MainPage.vb",
+              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\MainPage.vb [Entwurf]*",
+              "RelativeToolTip": "Nextronome Aveatronic\\MainPage.vb [Entwurf]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-23T00:06:29.107Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Styleselect.vb [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb",
+              "RelativeDocumentMoniker": "Nextronome Aveatronic\\Styleselect.vb",
+              "ToolTip": "C:\\Users\\deniz\\Documents\\GitHub\\Nextronome-2\\Nextronome Aveatronic\\Nextronome Aveatronic\\Styleselect.vb [Entwurf]",
+              "RelativeToolTip": "Nextronome Aveatronic\\Styleselect.vb [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-23T22:53:46.087Z",
               "EditorCaption": " [Entwurf]"
             }
           ]
