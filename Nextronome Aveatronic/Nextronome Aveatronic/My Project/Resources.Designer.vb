@@ -143,6 +143,16 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property StyleTab_pending() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("StyleTab_pending", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property StyleTab_selected() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("StyleTab_selected", resourceCulture)

@@ -1,12 +1,15 @@
-﻿Public Class Form1
+﻿Public Class MainPage
 
-    ' Farben
+    ' UI Colors
     Private ReadOnly xblue As Color = Color.FromArgb(255, 97, 180, 241)
     Private ReadOnly xgreen As Color = Color.FromArgb(255, 102, 246, 159)
     Private ReadOnly xorange As Color = Color.FromArgb(255, 244, 136, 30)
     Private ReadOnly xdarkgray As Color = Color.FromArgb(255, 38, 38, 38)
+    Private ReadOnly xlime As Color = Color.FromArgb(255, 0, 176, 80)
 
     Public ReadOnly _core As New NextronomeController()
+
+    ' Current standard path for styles - going to be changed to new Miyu Melu conform structure.
     Private ReadOnly _basePath As String = "C:\KAVN\Applications\Accompaniment\Styles\"
 
     Private _lightEffect As Integer = 0
@@ -14,17 +17,14 @@
     Private _ledMap As Dictionary(Of String, PictureBox)
     Private _buttonMap As Dictionary(Of String, Control)
 
-    ' ════════════════════════════════════════════════════════
-    '  INITIALISIERUNG
-    ' ════════════════════════════════════════════════════════
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitMaps()
         ResetBeatDisplay()
 
         Dim ledOk As Boolean = _core.Initialize(_basePath)
         If Not ledOk Then
-            MessageBox.Show("Konnte keine Verbindung zu Logitech G HUB herstellen. Läuft G HUB im Hintergrund?")
+            ' Possible MessageBox or Notification. Could be connected to a logging system.
+            ' MessageBox.Show("G HUB not loaded.")
         End If
 
         AddHandler _core.BeatTick, AddressOf OnBeatTick
@@ -32,15 +32,14 @@
         AddHandler _core.Stopped, AddressOf OnMetronomeStopped
         AddHandler _core.StyleLoaded, AddressOf OnStyleLoaded
         AddHandler _core.SlotSwitchReady, AddressOf OnSlotSwitchReady
+        AddHandler _core.NoMainAvailable, AddressOf OnNoMainAvailable
 
-        ' Gespeicherte Settings laden
         Dim savedStyle As String = My.Settings.Style1
         If Not String.IsNullOrEmpty(savedStyle) Then Style_Name.Text = savedStyle
 
         Dim savedStyle2 As String = My.Settings.Style2
         If Not String.IsNullOrEmpty(savedStyle2) Then Style2_Name.Text = savedStyle2
 
-        ' Slot-2-Labels ohne Audio laden (inaktiver Slot)
         Dim s2 As String = Style2_Name.Text
         If Not String.IsNullOrEmpty(s2) Then
             Dim bpm2 As String = StyleLoader.ReadValue(_basePath & s2 & "\bpm.val", "-")
@@ -49,13 +48,15 @@
             Family2_Name.Text = fam2
         End If
 
-        ' Aktiven Slot (1) vollständig laden
         RefreshCurrentStyle()
 
         If Screen.AllScreens.Length > 1 Then
             Me.Location = Screen.AllScreens(1).WorkingArea.Location
         End If
         Me.WindowState = FormWindowState.Maximized
+
+        ' UI Data
+        Touch_Control_Panel.Hide()
     End Sub
 
     Private Sub InitMaps()
@@ -73,11 +74,6 @@
         }
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  STYLE LADEN
-    ' ════════════════════════════════════════════════════════
-
-    ''' <summary>Vollständiges Laden inkl. Audio – nur wenn Metronom NICHT läuft.</summary>
     Public Sub RefreshCurrentStyle()
         Dim styleName As String = If(_core.State.Active = 1, Style_Name.Text, Style2_Name.Text)
         If String.IsNullOrEmpty(styleName) Then Return
@@ -86,7 +82,6 @@
         UpdateStyleUI(data, _core.State.Active, styleName)
     End Sub
 
-    ''' <summary>Nur UI-Controls aktualisieren – kein File-I/O, kein Audio-Laden.</summary>
     Private Sub UpdateStyleUI(data As StyleData, slot As Integer, styleName As String)
         If Not _core.MetronomMode Then
             Current_BPM.Text = data.BPM.ToString()
@@ -101,7 +96,6 @@
             Family2_Name.Text = family
         End If
 
-        ' Buttons und LEDs nach verfügbaren Sections
         For Each kv In _ledMap
             If kv.Key = "Break" Then Continue For
             Dim available As Boolean = data.HasSection(kv.Key)
@@ -142,44 +136,42 @@
         End If
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  STYLE-WECHSEL  (Slot 1 ↔ Slot 2)
-    ' ════════════════════════════════════════════════════════
-
     Private Sub SetActiveStyle(slot As Integer)
-        ' Bereits dieser Slot aktiv und kein Wechsel ausstehend → nichts tun
         If _core.State.Active = slot AndAlso _core.State.PendingSlot = 0 Then Return
 
-        If _core.Engine.IsRunning Then
-            ' Metronom läuft → auf nächsten Bar-Start vormerken + im Hintergrund vorladen
-            _core.State.PendingSlot = slot
-            Dim pendingName As String = If(slot = 1, Style_Name.Text, Style2_Name.Text)
-            _core.PreloadPendingStyle(pendingName)
-        Else
-            ' Kein Metronom → sofort wechseln
-            DoSwitchStyleUI(slot)
+        If Not _core.Engine.IsRunning Then
+            _core.State.PendingSlot = 0
+            _core.State.Active = slot
+            DoSwitchPanelUI(slot, isCompleted:=True)
             RefreshCurrentStyle()
+            Return
+        End If
+
+        _core.State.PendingSlot = slot
+        Dim pendingName As String = If(slot = 1, Style_Name.Text, Style2_Name.Text)
+
+        SetPanelPending(slot)
+
+        Dim isDirect As Boolean = (_core.State.ChangeMode = "Direct")
+        _core.PreloadPendingStyle(pendingName, isDirect)
+    End Sub
+
+    Friend Sub SetPanelPending(targetSlot As Integer)
+        If targetSlot = 1 Then
+            Style1_Panel.BackgroundImage = My.Resources.StyleTab_pending
+        Else
+            Style2_Panel.BackgroundImage = My.Resources.StyleTab_pending
         End If
     End Sub
 
-    ''' <summary>
-    ''' Wird vom Core-Event gefeuert wenn Puffer getauscht wurde.
-    ''' Nur UI-Update – Audio ist bereits geladen.
-    ''' </summary>
-    Private Sub OnSlotSwitchReady(slot As Integer, data As StyleData, styleName As String)
-        Me.Invoke(Sub()
-                      DoSwitchStyleUI(slot)
-                      ' UpdateStyleUI statt RefreshCurrentStyle – kein Audio-Laden!
-                      UpdateStyleUI(data, slot, styleName)
-                      _core.Leds.RefreshSectionLEDs(data, _core.State)
-                  End Sub)
-    End Sub
-
-    ''' <summary>Nur die Panel-Farben für den Slot-Wechsel setzen.</summary>
-    Private Sub DoSwitchStyleUI(slot As Integer)
+    Private Sub DoSwitchPanelUI(slot As Integer, isCompleted As Boolean)
         Dim isSlot1 As Boolean = (slot = 1)
 
-        Style1_Panel.BackgroundImage = If(isSlot1, My.Resources.StyleTab_selected, My.Resources.StyleTab_empty)
+        If isCompleted Then
+            Style1_Panel.BackgroundImage = If(isSlot1, My.Resources.StyleTab_selected, My.Resources.StyleTab_empty)
+            Style2_Panel.BackgroundImage = If(Not isSlot1, My.Resources.StyleTab_selected, My.Resources.StyleTab_empty)
+        End If
+
         Dim col1 As Color = If(isSlot1, Color.White, Color.Black)
         Dim col1d As Color = If(isSlot1, Color.White, xdarkgray)
         Style1_Label.ForeColor = col1
@@ -188,7 +180,6 @@
         BPM_Label.ForeColor = col1d
         DataType_Label.ForeColor = col1d
 
-        Style2_Panel.BackgroundImage = If(Not isSlot1, My.Resources.StyleTab_selected, My.Resources.StyleTab_empty)
         Dim col2 As Color = If(Not isSlot1, Color.White, Color.Black)
         Dim col2d As Color = If(Not isSlot1, Color.White, xdarkgray)
         Style2_Label.ForeColor = col2
@@ -198,9 +189,22 @@
         DataType2_Label.ForeColor = col2d
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  SECTION-AUSWAHL
-    ' ════════════════════════════════════════════════════════
+    Private Sub OnSlotSwitchReady(slot As Integer, data As StyleData, styleName As String)
+        Me.Invoke(Sub()
+                      DoSwitchPanelUI(slot, isCompleted:=True)
+                      UpdateStyleUI(data, slot, styleName)
+                      _core.Leds.RefreshSectionLEDs(data, _core.State)
+                  End Sub)
+    End Sub
+
+    Private Sub OnNoMainAvailable()
+        Me.Invoke(Sub()
+                      DoSwitchPanelUI(_core.State.Active, isCompleted:=True)
+                      _core.StopMetronome()
+                      PlayPauseButton.Text = "Start"
+                      MessageBox.Show("Kein Main-Teil im neuen Stil verfügbar. Metronom gestoppt.")
+                  End Sub)
+    End Sub
 
     Private Sub SelectMain(index As Integer)
         _core.State.ClearTransitions()
@@ -253,12 +257,13 @@
         End If
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  METRONOM
-    ' ════════════════════════════════════════════════════════
-
     Private Sub ToggleMetronome()
         If _core.Engine.IsRunning Then
+            If _core.State.PendingSlot > 0 Then
+                Dim cancelledSlot As Integer = _core.State.PendingSlot
+                _core.State.PendingSlot = 0
+                DoSwitchPanelUI(_core.State.Active, isCompleted:=True)
+            End If
             _core.StopMetronome()
             PlayPauseButton.Text = "Start"
         Else
@@ -270,10 +275,6 @@
     Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles PlayPauseButton.Click
         ToggleMetronome()
     End Sub
-
-    ' ════════════════════════════════════════════════════════
-    '  CORE-EVENTS
-    ' ════════════════════════════════════════════════════════
 
     Private Sub OnBeatTick(taktBeat As Integer)
         Me.Invoke(Sub()
@@ -307,12 +308,9 @@
     End Sub
 
     Private Sub OnStyleLoaded(data As StyleData)
-        ' Nichts nötig – RefreshCurrentStyle übernimmt alles
+        ' Empty - Has been replaced by RefreshCurrentStyle
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  BEAT-ANZEIGE
-    ' ════════════════════════════════════════════════════════
 
     Private Sub UpdateBeatDisplay(beat As Integer)
         ResetBeatDisplay()
@@ -322,16 +320,14 @@
         Dim isPending As Boolean = (_core.State.PendingSlot > 0)
 
         If isPending Then
-            ' Wechsel ausstehend → ALLE Beats Lime (kein Orange)
-            PlayPauseLED.BackColor = xgreen
+            PlayPauseLED.BackColor = xlime
             Select Case displayBeat
-                Case 1 : Beat1.BackColor = xgreen
-                Case 2 : Beat2.BackColor = xgreen
-                Case 3 : Beat3.BackColor = xgreen
-                Case 4 : Beat4.BackColor = xgreen
+                Case 1 : Beat1.BackColor = xlime
+                Case 2 : Beat2.BackColor = xlime
+                Case 3 : Beat3.BackColor = xlime
+                Case 4 : Beat4.BackColor = xlime
             End Select
         Else
-            ' Normal → Beat 1 Orange, Rest Grün
             PlayPauseLED.BackColor = If(displayBeat = 1, xorange, xgreen)
             Select Case displayBeat
                 Case 1 : Beat1.BackColor = xorange
@@ -375,41 +371,33 @@
         t.Dispose()
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  BUTTON-HANDLER
-    ' ════════════════════════════════════════════════════════
-
-    Private Sub Button3_Click(s As Object, e As EventArgs) Handles Main1Button.Click
+    Private Sub Main1Button_Click(s As Object, e As EventArgs) Handles Main1Button.Click
         SelectMain(1) : End Sub
-    Private Sub Button4_Click(s As Object, e As EventArgs) Handles Main2Button.Click
+    Private Sub Main2Button_Click(s As Object, e As EventArgs) Handles Main2Button.Click
         SelectMain(2) : End Sub
-    Private Sub Button5_Click(s As Object, e As EventArgs) Handles Main3Button.Click
+    Private Sub Main3Button_Click(s As Object, e As EventArgs) Handles Main3Button.Click
         SelectMain(3) : End Sub
-    Private Sub Button6_Click(s As Object, e As EventArgs) Handles Main4Button.Click
+    Private Sub Main4Button_Click(s As Object, e As EventArgs) Handles Main4Button.Click
         SelectMain(4) : End Sub
 
-    Private Sub Button10_Click(s As Object, e As EventArgs) Handles Intro1Button.Click
+    Private Sub Intro1Button_Click(s As Object, e As EventArgs) Handles Intro1Button.Click
         ToggleIntro(1) : End Sub
-    Private Sub Button9_Click(s As Object, e As EventArgs) Handles Intro2Button.Click
+    Private Sub Intro2Button_Click(s As Object, e As EventArgs) Handles Intro2Button.Click
         ToggleIntro(2) : End Sub
-    Private Sub Button8_Click(s As Object, e As EventArgs) Handles Intro3Button.Click
+    Private Sub Intro3Button_Click(s As Object, e As EventArgs) Handles Intro3Button.Click
         ToggleIntro(3) : End Sub
 
-    Private Sub Button7_Click(s As Object, e As EventArgs) Handles BreakButton.Click
+    Private Sub BreakButton_Click(s As Object, e As EventArgs) Handles BreakButton.Click
         ToggleBreak() : End Sub
 
-    Private Sub Button11_Click(s As Object, e As EventArgs) Handles Outro1Button.Click
+    Private Sub Outro1Button_Click(s As Object, e As EventArgs) Handles Outro1Button.Click
         ToggleOutro(1) : End Sub
-    Private Sub Button12_Click(s As Object, e As EventArgs) Handles Outro2Button.Click
+    Private Sub Outro2Button_Click(s As Object, e As EventArgs) Handles Outro2Button.Click
         ToggleOutro(2) : End Sub
-    Private Sub Button13_Click(s As Object, e As EventArgs) Handles Outro3Button.Click
+    Private Sub Outro3Button_Click(s As Object, e As EventArgs) Handles Outro3Button.Click
         ToggleOutro(3) : End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  TASTATUR-SHORTCUTS
-    ' ════════════════════════════════════════════════════════
-
-    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub MainPage_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If Not My.Settings.FKey Then Return
 
         Select Case e.KeyCode
@@ -435,18 +423,11 @@
         End Select
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  BEGLEITUNGS-MODUS
-    ' ════════════════════════════════════════════════════════
-
     Private Sub SetAccompaniment(mode As String)
         Dim styleName As String = If(_core.State.Active = 1, Style_Name.Text, Style2_Name.Text)
         _core.SetAccompaniment(mode, styleName)
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  CHANGE-MODE
-    ' ════════════════════════════════════════════════════════
 
     Private Sub ToggleChangeMode()
         If _core.State.ChangeMode = "Direct" Then
@@ -458,15 +439,11 @@
         End If
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  STYLE-SELECTOR ÖFFNEN
-    ' ════════════════════════════════════════════════════════
-
     Private Sub OpenStyleSelector(s As Object, e As EventArgs) _
-        Handles Style1_Panel.Click, Style_Name.Click, Family_Name.Click, BPM_Label.Click,
-                DataType_Label.Click,
+        Handles Style1_Panel.Click, Style_Name.Click, BPM_Label.Click,
+                Family_Name.Click, DataType_Label.Click,
                 Style2_Panel.Click, Style2_Name.Click, BPM2_Label.Click,
-                Family2_Name.Click, DataType2_Label.Click, Style2_Label.Click
+                Family2_Name.Click, DataType2_Label.Click
         Styleselect.Show()
     End Sub
 
@@ -474,19 +451,25 @@
         SetActiveStyle(1)
     End Sub
 
-    ' ════════════════════════════════════════════════════════
-    '  SONSTIGES
-    ' ════════════════════════════════════════════════════════
+    Private Sub Style2_Label_Click(s As Object, e As EventArgs) Handles Style2_Label.Click
+        SetActiveStyle(2)
+    End Sub
 
-    Private Sub PictureBox4_Click(s As Object, e As EventArgs) Handles PictureBox4.Click
+    Private Sub Settings_Button_Click(s As Object, e As EventArgs) Handles Settings_Button.Click
+        ' Settings is going to need a rehaul to fit into the new structure.
+        ' The plan is to create new options and change the UI of settings to fit the main design.
         ' Settings.Show()
     End Sub
 
-    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
-        Touch_Control.Hide()
+    Private Sub Touch_Control_Panel_Close_Button_Click(sender As Object, e As EventArgs) Handles Touch_Control_Panel_Close_Button.Click
+        Touch_Control_Panel.Hide()
     End Sub
 
-    Private Sub Touch_Control_Button_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Touch_Control.Show()
+    Private Sub Touch_Control_Button_Click(sender As Object, e As EventArgs) Handles Touch_Control_Button.Click
+        Touch_Control_Panel.Show()
+    End Sub
+
+    Private Sub Standard_Clock_Tick(sender As Object, e As EventArgs) Handles Standard_Clock.Tick
+        Clock_Label.Text = DateTime.Now.ToString("HH:mm")
     End Sub
 End Class

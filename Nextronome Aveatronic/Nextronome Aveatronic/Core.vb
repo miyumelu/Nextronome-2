@@ -5,8 +5,6 @@ Imports System.Runtime.InteropServices
 Imports System.Threading
 Imports System.Threading.Tasks
 
-' ── Kein Namespace – Core.vb ist direkt im Projekt eingebunden ──
-
 Public Class StyleData
     Public Property BPM As Integer = 120
     Public Property Beats As New Dictionary(Of String, Integer)
@@ -20,6 +18,17 @@ Public Class StyleData
         If Beats.TryGetValue(name, v) Then Return v
         Return 4
     End Function
+
+    ''' <summary>
+    ''' Gibt den ersten verfügbaren Main-Index zurück (1–4).
+    ''' Gibt 0 zurück wenn kein Main existiert.
+    ''' </summary>
+    Public Function FirstAvailableMain() As Integer
+        For i As Integer = 1 To 4
+            If HasSection("Main" & i) Then Return i
+        Next
+        Return 0
+    End Function
 End Class
 
 Public Class PlaybackState
@@ -32,7 +41,7 @@ Public Class PlaybackState
     Public Property Accompaniment As String = "Full"
     Public Property ChangeMode As String = "Ending"
     Public Property Active As Integer = 1
-    Public Property PendingSlot As Integer = 0
+    Public Property PendingSlot As Integer = 0   ' 0 = kein Wechsel ausstehend
 
     Public Function GetCurrentSection() As String
         If Intro Then Return "Intro" & SelectIntro
@@ -101,10 +110,9 @@ Public Class AudioEngine
     Private ReadOnly _lock As New Object()
     Private ReadOnly _players As New Dictionary(Of String, SoundPlayer)
 
-    ' ── Pending-Puffer für Hintergrund-Vorladen ──────────────────────
     Private ReadOnly _pendingLock As New Object()
     Private ReadOnly _pendingPlayers As New Dictionary(Of String, SoundPlayer)
-    Private _pendingReady As Integer = 0   ' Interlocked: 0 = nicht bereit, 1 = bereit
+    Private _pendingReady As Integer = 0
 
     Public ReadOnly Property IsPendingReady As Boolean
         Get
@@ -112,9 +120,7 @@ Public Class AudioEngine
         End Get
     End Property
 
-    ''' <summary>
-    ''' Lädt neuen Stil in den Pending-Puffer. Muss auf einem Hintergrund-Thread aufgerufen werden.
-    ''' </summary>
+    ''' <summary>Lädt neuen Stil in Pending-Puffer (Hintergrund-Thread).</summary>
     Public Sub PreloadPending(basePath As String, styleName As String,
                                accompaniment As String, styleData As StyleData)
         Interlocked.Exchange(_pendingReady, 0)
@@ -136,23 +142,20 @@ Public Class AudioEngine
         Interlocked.Exchange(_pendingReady, 1)
     End Sub
 
-    ''' <summary>
-    ''' Tauscht Pending gegen aktiven Puffer. Kein File-I/O – sicher auf Metronom-Thread.
-    ''' </summary>
+    ''' <summary>Tauscht Pending gegen aktiven Puffer. Kein File-I/O – sicher auf Metronom-Thread.</summary>
     Public Sub PromotePending()
         SyncLock _lock
             SyncLock _pendingLock
                 DisposeAll()
                 For Each kv In _pendingPlayers
-                    _players(kv.Key) = kv.Value   ' Referenz übergeben, kein Dispose!
+                    _players(kv.Key) = kv.Value
                 Next
-                _pendingPlayers.Clear()           ' Nur Dictionary leeren, Players leben weiter
+                _pendingPlayers.Clear()
             End SyncLock
         End SyncLock
         Interlocked.Exchange(_pendingReady, 0)
     End Sub
 
-    ''' <summary>Normales synchrones Laden (wenn Metronom nicht läuft).</summary>
     Public Sub LoadAll(basePath As String, styleName As String,
                        accompaniment As String, styleData As StyleData)
         SyncLock _lock
@@ -176,7 +179,6 @@ Public Class AudioEngine
         End Try
     End Sub
 
-    ''' <summary>Play außerhalb des Locks – verhindert Deadlock mit Metronom-Thread.</summary>
     Public Sub Play(sectionName As String)
         Dim player As SoundPlayer = Nothing
         SyncLock _lock
@@ -251,6 +253,8 @@ Public Class LedController
     Public Shared ReadOnly COLOR_STOP As (R As Integer, G As Integer, B As Integer) = (100, 0, 0)
     Public Shared ReadOnly COLOR_ORANGE As (R As Integer, G As Integer, B As Integer) = (100, 70, 0)
     Public Shared ReadOnly COLOR_OFF As (R As Integer, G As Integer, B As Integer) = (0, 0, 0)
+    ' Lime: starkes Gelbgrün – klar unterscheidbar von COLOR_ACTIVE
+    Public Shared ReadOnly COLOR_LIME As (R As Integer, G As Integer, B As Integer) = (75, 100, 0)
 
     Public Function Init() As Boolean
         Return LogitechGSDK.LogiLedInit()
@@ -293,10 +297,10 @@ Public Class LedController
         End If
     End Sub
 
-    ''' <summary>Beat-LED auf ESC. Bei isPending immer Grün (kein Orange für Beat 1).</summary>
+    ''' <summary>ESC-Beat-LED. Bei isPending immer Lime.</summary>
     Public Sub SetBeatLED(beat As Integer, isPending As Boolean)
         If isPending Then
-            SetKey(KEY_ESC, COLOR_ACTIVE)   ' Immer Grün während Wechsel ausstehend
+            SetKey(KEY_ESC, COLOR_LIME)
         ElseIf beat = 1 Then
             SetKey(KEY_ESC, COLOR_ORANGE)
         Else
@@ -346,6 +350,9 @@ Public Class MetronomeEngine
     Private _beatsPerBar As Integer = 4
     Private _calcVal As Integer = 60000
 
+    ' Direct-Modus: nächste Iteration wird erzwungen zu Beat 1
+    Private _forceBarStart As Integer = 0   ' Interlocked
+
     Private _isRunning As Boolean = False
     Public ReadOnly Property IsRunning As Boolean
         Get
@@ -386,6 +393,14 @@ Public Class MetronomeEngine
         If beats > 0 Then _beatsPerBar = beats
     End Sub
 
+    ''' <summary>
+    ''' Erzwingt beim nächsten BeatTick einen Bar-Start (Beat 1).
+    ''' Wird für Direct-Modus beim Style-Wechsel verwendet.
+    ''' </summary>
+    Public Sub ForceNextBarStart()
+        Interlocked.Exchange(_forceBarStart, 1)
+    End Sub
+
     Private Sub RunLoop()
         Dim sw As New Stopwatch()
         sw.Start()
@@ -395,6 +410,11 @@ Public Class MetronomeEngine
         While Not _stopFlag
             Dim interval As Long = CLng(_calcVal / _bpm)
             nextBeatTime += interval
+
+            ' Direct-Modus: nächsten Beat als Beat 1 behandeln
+            If Interlocked.CompareExchange(_forceBarStart, 0, 1) = 1 Then
+                beatCount = 0   ' → nach +1 = 1
+            End If
 
             beatCount += 1
             If beatCount > _beatsPerBar Then beatCount = 1
@@ -434,7 +454,6 @@ Public Class NextronomeController
     Private _basePath As String
     Private _metronomMode As Boolean = False
 
-    ' Vorgeladener Stil für nahtlosen Wechsel
     Private _pendingStyleData As StyleData = Nothing
     Private _pendingStyleName As String = ""
 
@@ -442,8 +461,10 @@ Public Class NextronomeController
     Public Event BarStart(section As String)
     Public Event Stopped()
     Public Event StyleLoaded(data As StyleData)
-    ' Wechsel vollzogen – UI soll Labels/Panels aktualisieren (kein File-I/O nötig)
+    ''' <summary>Wechsel vollzogen. UI soll Panels + Labels aktualisieren.</summary>
     Public Event SlotSwitchReady(slot As Integer, data As StyleData, styleName As String)
+    ''' <summary>Kein Main im neuen Stil gefunden → Metronom soll stoppen.</summary>
+    Public Event NoMainAvailable()
 
     Public Function Initialize(basePath As String) As Boolean
         _basePath = basePath
@@ -487,9 +508,9 @@ Public Class NextronomeController
 
     ''' <summary>
     ''' Startet Hintergrund-Vorladen des neuen Stils.
-    ''' Wird aufgerufen wenn Metronom läuft und PendingSlot gesetzt wird.
+    ''' Bei isDirect = True wird zusätzlich ForceNextBarStart() aufgerufen.
     ''' </summary>
-    Public Sub PreloadPendingStyle(styleName As String)
+    Public Sub PreloadPendingStyle(styleName As String, isDirect As Boolean)
         If String.IsNullOrEmpty(styleName) Then Return
         _pendingStyleName = styleName
         _pendingStyleData = Nothing
@@ -498,12 +519,16 @@ Public Class NextronomeController
                      Try
                          Dim data As StyleData = StyleLoader.Load(_basePath, styleName, _styleData.BPM)
                          _pendingStyleData = data
-                         ' Audio in Pending-Puffer laden (Hintergrund)
                          Audio.PreloadPending(_basePath, styleName, State.Accompaniment, data)
                      Catch ex As Exception
                          Debug.WriteLine($"[Core] Fehler beim Vorladen '{styleName}': {ex.Message}")
                      End Try
                  End Sub)
+
+        ' Direct-Modus: aktuellen Takt abkürzen → nächster Beat wird Beat 1
+        If isDirect Then
+            Engine.ForceNextBarStart()
+        End If
     End Sub
 
     Public Sub SetAccompaniment(mode As String, styleName As String)
@@ -526,13 +551,32 @@ Public Class NextronomeController
     End Sub
 
     Private Sub OnBarStart(section As String)
-        ' ── Wechsel: nur wenn Vorladen vollständig abgeschlossen ──────────
+        ' ── Wechsel durchführen wenn Vorladen abgeschlossen ──────────────────
         If State.PendingSlot > 0 Then
             If Audio.IsPendingReady AndAlso _pendingStyleData IsNot Nothing Then
-                ' Puffer tauschen – kein File-I/O, sicher auf Metronom-Thread
+
+                ' Main-Fallback: Ritim im neuen Stil prüfen
+                Dim targetRitim As Integer = State.Ritim
+                If Not _pendingStyleData.HasSection("Main" & targetRitim) Then
+                    targetRitim = _pendingStyleData.FirstAvailableMain()
+                End If
+
+                If targetRitim = 0 Then
+                    ' Kein Main verfügbar → Wechsel abbrechen, Metronom stoppen
+                    State.PendingSlot = 0
+                    _pendingStyleData = Nothing
+                    RaiseEvent NoMainAvailable()
+                    Return
+                End If
+
+                ' Puffer tauschen – kein File-I/O
                 Audio.PromotePending()
                 _styleData = _pendingStyleData
                 _pendingStyleData = Nothing
+
+                ' Ritim auf verfügbaren Main setzen, Transitions zurücksetzen
+                State.Ritim = targetRitim
+                State.ClearTransitions()
 
                 ' BPM und Taktlänge sofort anpassen
                 Engine.SetBPM(_styleData.BPM, My.Settings.BPMCalcVal)
@@ -544,18 +588,17 @@ Public Class NextronomeController
                 ' Ersten Beat des neuen Stils abspielen
                 If Not _metronomMode Then PlayCurrentSection()
 
-                ' UI-Update anfordern (enthält StyleData für Labels)
                 RaiseEvent SlotSwitchReady(slot, _styleData, _pendingStyleName)
                 RaiseEvent BarStart(State.GetCurrentSection())
             Else
-                ' Vorladen noch nicht fertig → alten Stil einen Takt weiterspielen
+                ' Vorladen noch nicht fertig → einen Takt weiterspielen
                 If Not _metronomMode Then PlayCurrentSection()
                 RaiseEvent BarStart(State.GetCurrentSection())
             End If
             Return
         End If
 
-        ' ── Normaler Bar-Start ─────────────────────────────────────────────
+        ' ── Normaler Bar-Start ────────────────────────────────────────────────
         If Not _metronomMode Then PlayCurrentSection()
         RaiseEvent BarStart(State.GetCurrentSection())
     End Sub

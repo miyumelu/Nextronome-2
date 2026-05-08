@@ -11,6 +11,6 @@
 
     Private Sub Waitress_Tick(sender As Object, e As EventArgs) Handles Waitress.Tick
         Me.Hide()
-        Form1.Show()
+        MainPage.Show()
     End Sub
 End Class
