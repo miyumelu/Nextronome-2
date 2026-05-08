@@ -1,0 +1,21 @@
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.exe
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.dll.config
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.deps.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.runtimeconfig.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net6.0-windows7.0\Nextronome Aveatronic.pdb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome_Aveatronic.MainPage.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome_Aveatronic.Resources.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome_Aveatronic.Splashscreen.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome_Aveatronic.Styleselect.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.vbproj.GenerateResource.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.AssemblyInfoInputs.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.AssemblyInfo.vb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.vbproj.CoreCompileInputs.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.sourcelink.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\refint\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.pdb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\Nextronome Aveatronic.genruntimeconfig.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic - .NET 6.0 LegacyOS\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net6.0-windows7.0\ref\Nextronome Aveatronic.dll

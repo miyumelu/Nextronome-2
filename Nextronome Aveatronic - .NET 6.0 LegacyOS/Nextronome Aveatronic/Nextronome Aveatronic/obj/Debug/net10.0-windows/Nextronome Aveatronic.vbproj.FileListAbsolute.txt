@@ -1,0 +1,21 @@
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.exe
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.dll.config
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.deps.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.runtimeconfig.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\bin\Debug\net10.0-windows\Nextronome Aveatronic.pdb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome_Aveatronic.Resources.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome_Aveatronic.Splashscreen.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.vbproj.GenerateResource.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.AssemblyInfoInputs.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.AssemblyInfo.vb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.vbproj.CoreCompileInputs.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.sourcelink.json
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\refint\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.pdb
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome Aveatronic.genruntimeconfig.cache
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\ref\Nextronome Aveatronic.dll
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome_Aveatronic.Styleselect.resources
+C:\Users\deniz\Documents\GitHub\Nextronome-2\Nextronome Aveatronic\Nextronome Aveatronic\obj\Debug\net10.0-windows\Nextronome_Aveatronic.MainPage.resources
